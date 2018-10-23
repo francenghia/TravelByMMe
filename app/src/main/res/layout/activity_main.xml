@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/background_cover" />
+
+    <LinearLayout
+        android:id="@+id/places"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/background"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="-80dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ttravel"
+            app:civ_border_color="@color/semiTransparentWhite"
+            app:civ_border_width="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/places"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/body"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/places"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:met_baseColor="@color/colorPrimaryDark"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorPrimaryDark"
+        app:met_singleLineEllipsis="true"
+        app:met_iconLeft="@drawable/ic_email_black_24dp"
+        />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtEmail"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:met_baseColor="@color/colorPrimaryDark"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorPrimaryDark"
+        app:met_singleLineEllipsis="true"
+        app:met_iconLeft="@drawable/ic_vpn_key_black_24dp"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/round_button"
+        android:elevation="5dp"
+        android:text="Login"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

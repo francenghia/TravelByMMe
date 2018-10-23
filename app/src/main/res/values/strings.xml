@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TravelByMMe</string>
+    <string name="body">Airport, Car Rental, Hotel ,Directions,...</string>
+    <string name="places">PLACES</string>
+</resources>
